@@ -1,7 +1,7 @@
-# [am-cf-tunnel](https://github.com/ansoncloud8/am-cf-tunnel)
+# [am-cf-tunnel](https://github.com/amclubs/am-cf-tunnel)
 ▶️ **新人[YouTube](https://youtube.com/@AM_CLUB)** 需要您的支持，请务必帮我**点赞**、**关注**、**打开小铃铛**，***十分感谢！！！*** ✅
 </br>🎁 不要只是下载或Fork。请 **follow** 我的GitHub、给我所有项目一个 **Star** 星星（拜托了）！你的支持是我不断前进的动力！ 💖
-</br>✅**解锁更多技术请访问[【个人博客】](https://am.809098.xyz)**
+</br>✅**解锁更多技术请访问[【个人博客】](https://am.809098.xyz)**,加入TG群[【AM科技 | 分享交流群】](https://t.me/AM_CLUBS) 
 #
 
 # Cloudflare Workers 和 Pages 生成VLESS节点,实现订阅连接可以一键订阅节点
@@ -22,7 +22,7 @@
 
 # 免责声明
 
-本免责声明适用于 GitHub 上的 “am-cf-tunnel” 项目（以下简称“该项目”），项目链接为：https://github.com/ansoncloud8/am-cf-tunnel
+本免责声明适用于 GitHub 上的 “am-cf-tunnel” 项目（以下简称“该项目”），项目链接为：https://github.com/amclubs/am-cf-tunnel
 
 ### 用途
 该项目被设计和开发仅供学习、研究和安全测试目的。它旨在为安全研究者、学术界人士和技术爱好者提供一个了解和实践网络通信技术的工具。
@@ -39,22 +39,18 @@
 
 作者保留随时更新本免责声明的权利，且不另行通知。最新的免责声明版本将会在该项目的 GitHub 页面上发布。
 
-## 风险提示
-- 通过提交虚假的节点配置给订阅服务，避免节点配置信息泄露。
-
-
 ## Workers 部署方法 [视频教程](https://www.youtube.com/watch?v=f9hDJCqAEGA)
 1. 部署 Cloudflare Worker：
    - 在 Cloudflare Worker 控制台中创建一个新的 Worker。
-   - 将 [worker.js](https://github.com/ansoncloud8/am-cf-tunnel/blob/main/_worker.js) 的内容粘贴到 Worker 编辑器中。
+   - 将 [_worker.js](https://github.com/amclubs/am-cf-tunnel/blob/main/_worker.js) 的内容粘贴到 Worker 编辑器中。
    - 将第 6 行 `userID` 修改成你自己的 **UUID** 。
 2. 访问订阅内容：
    - 访问 `https://[YOUR-WORKERS-URL]/[UUID]` 即可获取订阅内容。
-   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 就是你的通用自适应订阅地址。
-   - 例如 `https://vless.google.workers.dev/sub/90cd4a77-141a-43c9-991b-08263cfe9c10` Base64订阅格式，适用PassWall,SSR+等。
-   - 例如 `https://vless.google.workers.dev/sub/90cd4a77-141a-43c9-991b-08263cfe9c10?format=clash` Clash订阅格式，适用OpenClash等。
-   - 例如 `https://vless.google.workers.dev/sub/bestip/90cd4a77-141a-43c9-991b-08263cfe9c10?format=singbox&uuid=68ecf7d9-5eb3-31ee-fe78-134a3d519356` singbox订阅格式，适用singbox等。
-   - 例如 `https://vless.google.workers.dev/sub/bestip/90cd4a77-141a-43c9-991b-08263cfe9c10?format=qx&uuid=68ecf7d9-5eb3-31ee-fe78-134a3d519356` Quantumult X订阅格式，适用Quantumult X工具。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 就是你的通用自适应订阅地址(Quantumult X、Clash、singbox、小火箭、v2rayN、v2rayU、surge、PassWall、SSR+、Karing等)。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?base64` Base64订阅格式，适用PassWall,SSR+等。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash` Clash订阅格式，适用OpenClash等。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?singbox` singbox订阅格式，适用singbox等。
+
 3. 给 workers绑定 自定义域： 
    - 在 workers控制台的 `触发器`选项卡，下方点击 `添加自定义域`。
    - 填入你已转入 CloudFlare 域名解析服务的次级域名，例如:`vless.google.com`后 点击`添加自定义域`，等待证书生效即可。
@@ -63,19 +59,17 @@
 
 ## Pages 上传 部署方法 **最佳推荐!!!** [视频教程](https://www.youtube.com/watch?v=8oZvklBkMj4)
 1. 部署 Cloudflare Pages：
-   - 下载 [_worker.js.zip](https://raw.githubusercontent.com/ansoncloud8/am-cf-tunnel/main/_worker.js.zip) 文件，并点上 Star !!!
-   - 在 Cloudflare Pages 控制台中选择 `上传资产`后，为你的项目取名后点击 `创建项目`，然后上传你下载好的 [_worker.js.zip](https://raw.githubusercontent.com/ansoncloud8/am-cf-tunnel/main/_worker.js.zip) 文件后点击 `部署站点`。
+   - 下载 [_worker.js.zip](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/_worker.js.zip) 文件，并点上 Star !!!
+   - 在 Cloudflare Pages 控制台中选择 `上传资产`后，为你的项目取名后点击 `创建项目`，然后上传你下载好的 [_worker.js.zip](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/_worker.js.zip) 文件后点击 `部署站点`。
    - 部署完成后点击 `继续处理站点` 后，选择 `设置` > `环境变量` > **制作**为生产环境定义变量 > `添加变量`。
      变量名称填写**UUID**，值则为你的UUID，后点击 `保存`即可。
-   - 返回 `部署` 选项卡，在右下角点击 `创建新部署` 后，重新上传 [_worker.js.zip](https://raw.githubusercontent.com/ansoncloud8/am-cf-tunnel/main/_worker.js.zip) 文件后点击 `保存并部署` 即可。
+   - 返回 `部署` 选项卡，在右下角点击 `创建新部署` 后，重新上传 [_worker.js.zip](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/_worker.js.zip) 文件后点击 `保存并部署` 即可。
 2. 访问订阅内容：
-   - 访问 `https://[YOUR-PAGES-URL]/[YOUR-UUID]` 即可获取订阅内容。
-   - 例如 `https://vless.google.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 就是你的通用自适应订阅地址。
-   - 例如 `https://vless.google.pages.dev/sub/90cd4a77-141a-43c9-991b-08263cfe9c10` Base64订阅格式，适用PassWall,SSR+等。
-   - 例如 `https://vless.google.pages.dev/sub/90cd4a77-141a-43c9-991b-08263cfe9c10?format=clash` Clash订阅格式，适用OpenClash等。
-   - 例如 `https://vless.google.pages.dev/sub/bestip/90cd4a77-141a-43c9-991b-08263cfe9c10?format=singbox&uuid=68ecf7d9-5eb3-31ee-fe78-134a3d519356` singbox订阅格式，适用singbox等。
-   - 例如 `https://vless.google.pages.dev/sub/bestip/90cd4a77-141a-43c9-991b-08263cfe9c10?format=qx&uuid=68ecf7d9-5eb3-31ee-fe78-134a3d519356` Quantumult X订阅格式，适用Quantumult X工具。
-
+   - 访问 `https://[YOUR-WORKERS-URL]/[UUID]` 即可获取订阅内容。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 就是你的通用自适应订阅地址(Quantumult X、Clash、singbox、小火箭、v2rayN、v2rayU、surge、PassWall、SSR+、Karing等)。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?base64` Base64订阅格式，适用PassWall,SSR+等。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash` Clash订阅格式，适用OpenClash等。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?singbox` singbox订阅格式，适用singbox等。
 
 3. 给 Pages绑定 CNAME自定义域：[视频教程](https://www.youtube.com/watch?v=8oZvklBkMj4)
    - 在 Pages控制台的 `自定义域`选项卡，下方点击 `设置自定义域`。
@@ -93,12 +87,11 @@
      变量名称填写**UUID**，值则为你的UUID，后点击 `保存并部署`即可。
 
 2. 访问订阅内容：
-   - 访问 `https://[YOUR-PAGES-URL]/[YOUR-UUID]` 即可获取订阅内容。
-   - 例如 `https://vless.google.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 就是你的通用自适应订阅地址。
-   - 例如 `https://vless.google.pages.dev/sub/90cd4a77-141a-43c9-991b-08263cfe9c10` Base64订阅格式，适用PassWall,SSR+等。
-   - 例如 `https://vless.google.pages.dev/sub/90cd4a77-141a-43c9-991b-08263cfe9c10?format=clash` Clash订阅格式，适用OpenClash等。
-   - 例如 `https://vless.google.pages.dev/sub/bestip/90cd4a77-141a-43c9-991b-08263cfe9c10?format=singbox&uuid=68ecf7d9-5eb3-31ee-fe78-134a3d519356` singbox订阅格式，适用singbox等。
-   - 例如 `https://vless.google.pages.dev/sub/bestip/90cd4a77-141a-43c9-991b-08263cfe9c10?format=qx&uuid=68ecf7d9-5eb3-31ee-fe78-134a3d519356` Quantumult X订阅格式，适用Quantumult X工具。
+   - 访问 `https://[YOUR-WORKERS-URL]/[UUID]` 即可获取订阅内容。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 就是你的通用自适应订阅地址(Quantumult X、Clash、singbox、小火箭、v2rayN、v2rayU、surge、PassWall、SSR+、Karing等)。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?base64` Base64订阅格式，适用PassWall,SSR+等。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash` Clash订阅格式，适用OpenClash等。
+   - 例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?singbox` singbox订阅格式，适用singbox等。
 
 3. 给 Pages绑定 CNAME自定义域：[视频教程](https://www.youtube.com/watch?v=8oZvklBkMj4)
    - 在 Pages控制台的 `自定义域`选项卡，下方点击 `设置自定义域`。
@@ -110,31 +103,29 @@
 </details>
 
 ## 变量说明
-| 变量名 | 示例 | 必填 | 备注 | YT |  |
-|--------|---------|-|-----|-----|--------|
-| UUID | 90cd4a77-141a-43c9-991b-08263cfe9c10 |√| Powershell -NoExit -Command "[guid]::NewGuid()"| [Video](https://www.youtube.com/watch?v=8oZvklBkMj4) |  |
-| PROXYIP | ts.hpc.tw |×| 备选作为访问CloudFlareCDN站点的代理节点(支持多ProxyIP, ProxyIP之间使用`,`或 换行 作间隔) | [Video](https://youtu.be/CiSdaNOCyOk) |  |
-| SOCKS5    | user:password@127.0.0.1:1080                                 | 优先作为访问CFCDN站点的SOCKS5代理                            |
-| SUBCONFIG  | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |×| clash、singbox等 订阅转换配置文件                            |
-| SUB       | trojan.cftest.dynv6.net                                         | 优选订阅生成器地址(使用订阅器将放弃`ADD`内的本地优选订阅内容) 
+| 变量名 | 示例 | 必填 | 备注 | YT |
+|-----|-----|-----|-----|-----|
+| UUID | 90cd4a77-141a-43c9-991b-08263cfe9c10 |√| Powershell -NoExit -Command "[guid]::NewGuid()"| [Video](https://www.youtube.com/watch?v=8oZvklBkMj4) |
+| PROXYIP | cdn-b100.xn--b6gac.eu.org |❌| 备选作为访问CloudFlareCDN站点的代理节点(支持多ProxyIP, ProxyIP之间使用`,`或 换行 作间隔) | [Video](https://youtu.be/CiSdaNOCyOk) |
+| SOCKS5    | user:password@127.0.0.1:1080  |❌                               | 优先作为访问CFCDN站点的SOCKS5代理                            | |
 | ADD | `icook.tw:2053#官方优选域名` |❌| 本地优选TLS域名/优选IP(支持多元素之间`,`或 换行 作间隔) ||
-| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/ansoncloud8/am-tunnel/dev/ipv4.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
-| ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/ansoncloud8/am-tunnel/dev/ipv4.csv) |❌| iptest测速结果(支持多元素, 元素之间使用`,`作间隔) ||
+| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
+| ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.csv) |❌| iptest测速结果(支持多元素, 元素之间使用`,`作间隔) ||
 | ADDNOTLS | `icook.hk:8080#官方优选域名` |❌| 本地优选noTLS域名/优选IP(支持多元素之间`,`或 换行 作间隔) ||
-| ADDNOTLSAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/ansoncloud8/am-tunnel/dev/ipv4.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
+| ADDNOTLSAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
+| SUB       | trojan.cftest.dynv6.net   |❌                                       | 优选订阅生成器地址(使用订阅器将放弃`ADD`内的本地优选订阅内容) ||
+| SUBAPI    | subapi.cftest.dynv6.net  |❌                                    | clash、singbox等 订阅转换后端                                ||
+| SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Mini.ini](https://raw.githubusercontent.com/amclubs/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |❌  | clash、singbox等 订阅转换配置文件  ||
+| SUBNAME   | am-cf-tunnel  |❌                                                      | 订阅名称                                                     ||
 | DLS | `8` |❌| `ADDCSV`测速结果满足速度下限 ||
-| DLS       | 8                                                            | `ADDCSV`测速结果满足速度下限                                 |
-| TGTOKEN   | 6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXXXXqWXgBA               | 发送TG通知的机器人token                                      |
-| TGID      | 6946912345                                                   | 接收TG通知的账户数字ID                                       |
-| SUB       | trojan.cftest.dynv6.net                                         | 优选订阅生成器地址(使用订阅器将放弃`ADD`内的本地优选订阅内容) |
-| SUBAPI    | subapi.cftest.dynv6.net                                     | clash、singbox等 订阅转换后端                                |
-| SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Mini.ini](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini) | clash、singbox等 订阅转换配置文件                            |
-| SUBNAME   | am-trojan                                                       | 订阅名称                                                     |
-| RPROXYIP  | false                                                        | 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)      |
-| URL302    | https://t.me/AM_CLUBS                                    | 主页302跳转(支持多url, url之间使用`,`或 换行 作间隔, 小白别用) |
-| URL       | https://t.me/AM_CLUBS                                    | 主页伪装(支持多url, url之间使用`,`或 换行 作间隔, 乱设容易触发反诈) |
-| CFEMAIL   | test@gmail.com                                              | CF账户邮箱(与`CFKEY`都填上后, 订阅信息将显示请求使用量, 小白别用) |
-| CFKEY     | c6a944b5c956b6c18c2352880952bced8b85e                        | CF账户Global API Key(与`CFEMAIL`都填上后, 订阅信息将显示请求使用量, 小白别用) |
+| DLS       | 8        |❌                                                     | `ADDCSV`测速结果满足速度下限                                 ||
+| TGTOKEN   | 6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXXXXqWXgBA     |❌           | 发送TG通知的机器人token                                      ||
+| TGID      | 6946912345    |❌                                                | 接收TG通知的账户数字ID                                       ||
+| RPROXYIP  | false       |❌                                                  | 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)      ||
+| URL302    | https://t.me/AM_CLUBS       |❌                              | 主页302跳转(支持多url, url之间使用`,`或 换行 作间隔, 小白别用) ||
+| URL       | https://t.me/AM_CLUBS   |❌                                  | 主页伪装(支持多url, url之间使用`,`或 换行 作间隔, 乱设容易触发反诈) ||
+| CFEMAIL   | test@gmail.com         |❌                                      | CF账户邮箱(与`CFKEY`都填上后, 订阅信息将显示请求使用量, 小白别用) ||
+| CFKEY     | c6a944b5c956b6c18c2352880952bced8b85e     |❌                    | CF账户Global API Key(与`CFEMAIL`都填上后, 订阅信息将显示请求使用量, 小白别用) ||
 
 
 ## 已适配自适应订阅内容
@@ -146,11 +137,10 @@
    - Quantumult X
    - 小火箭
    - surge
-  
- #
-▶️ **新人[YouTube](https://youtube.com/@AM_CLUB)** 需要您的支持，请务必帮我**点赞**、**关注**、**打开小铃铛**，***十分感谢！！！*** ✅
-</br>🎁 不要只是下载或Fork。请 **follow** 我的GitHub、给我所有项目一个 **Star** 星星（拜托了）！你的支持是我不断前进的动力！ 💖
-  
+
+# 感谢
+[3Kmfi6HP](https://github.com/3Kmfi6HP/EDtunnel)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
+
  # 
 <center><details><summary><strong> [点击展开] 赞赏支持 ~🧧</strong></summary>
 *我非常感谢您的赞赏和支持，它们将极大地激励我继续创新，持续产生有价值的工作。*
@@ -158,8 +148,3 @@
 - **USDT-TRC20:** `TWTxUyay6QJN3K4fs4kvJTT8Zfa2mWTwDD`
   
 </details></center>
-
-
-
-# 感谢
-[3Kmfi6HP](https://github.com/3Kmfi6HP/EDtunnel)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
